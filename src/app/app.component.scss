@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.login-container {
+    margin-top: 100px;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid #ccc; /* Agrega un borde al formulario */
+    padding: 20px;
+    border-radius: 8px; /* Agrega bordes redondeados al formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra al formulario */
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 10px;
+}

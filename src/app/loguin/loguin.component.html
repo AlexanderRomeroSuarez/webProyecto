@@ -1,0 +1,36 @@
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form mx-auto">
+            <form  [formGroup]="formGroup" (ngSubmit)="ingresar()">
+                <legend class="text-center">Login</legend>
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" class="form-control" formControlName="username" required>
+                    
+                    <div *ngIf="formGroup.get('username')!.hasError('required') && formGroup.get('username')!.touched" class="text-danger">
+                      Usuario es requerido
+                    </div>
+  
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" formControlName="password" required>
+  
+                    <div *ngIf="formGroup.get('password')!.hasError('required') && formGroup.get('password')!.touched" class="text-danger">
+                      Password es requerido
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn" [disabled]="formGroup.invalid">Ingresar</button>
+  
+                <div *ngIf="_errorMessage" class="alert alert-danger">
+                  {{ _errorMessage }}
+                </div>
+            </form>
+           
+        </div>
+    </div>
+  </div>
+  
+
+
