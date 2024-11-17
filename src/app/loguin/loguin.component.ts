@@ -31,7 +31,7 @@ export class LoguinComponent {
     if (this.formGroup.valid) {
       // Realizar la validación personalizada aquí
       if (this.customValidation(this.userName, this.password)) {
-        console.log("Inicio de sesión exitoso");
+        console.log("sesión iniciadoa con éxito");
         this._route.navigate(['./tareas']);
       } else {
         this._errorMessage = 'Usuario o contraseña incorrectos';
