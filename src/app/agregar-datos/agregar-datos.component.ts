@@ -25,9 +25,7 @@ export class AgregarDatosComponent implements  AfterViewInit {
   get tarea (): FormControl<string | any>{ 
     return this.formGroup.controls.tarea;
   }
-  ngAfterViewInit(){
-    //this.nombre= this.childComponent.userName;
-  }
+
   addItem() {
     if (this.formGroup.valid) {
       const newItemValue = this.formGroup.get('tarea')!.value;
