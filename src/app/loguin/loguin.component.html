@@ -3,13 +3,13 @@
     <div class="row">
         <div class="col-md-6 login-form mx-auto">
             <form  [formGroup]="formGroup" (ngSubmit)="ingresar()">
-                <legend class="text-center">Login</legend>
+                <legend class="text-center">Loguin</legend>
                 <div class="form-group">
                     <label for="username">Usuario:</label>
                     <input type="text" class="form-control" formControlName="username" required>
                     
                     <div *ngIf="formGroup.get('username')!.hasError('required') && formGroup.get('username')!.touched" class="text-danger">
-                      Usuario es requerido
+                      Usuario requerido
                     </div>
   
                 </div>
@@ -18,10 +18,10 @@
                     <input type="password" class="form-control" formControlName="password" required>
   
                     <div *ngIf="formGroup.get('password')!.hasError('required') && formGroup.get('password')!.touched" class="text-danger">
-                      Password es requerido
+                      Password requerido
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary login-btn" [disabled]="formGroup.invalid">Ingresar</button>
+                <button type="submit" class="btn btn-primary login-btn" [disabled]="formGroup.invalid">Aceptar</button>
   
                 <div *ngIf="_errorMessage" class="alert alert-danger">
                   {{ _errorMessage }}
