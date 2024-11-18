@@ -15,4 +15,8 @@ export class SharedServicesService {
   removeItem(index: number) {
     this.itemList.splice(index, 1);
   }
+
+  ShearchItem(index: number) {
+    this.itemList.splice(index, 1);
+  }
 }
